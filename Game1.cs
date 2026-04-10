@@ -2,36 +2,39 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace intro_to_monogame
+namespace Intro_to_monogame
 {
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-
-        Rectangle window;
         Texture2D dinoTexture;
-        Texture2D marioTexture;
+        Texture2D backgroundtexture;
+
+
+
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+
+            
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
 
-            window = new Rectangle(0, 0, 800, 600);
-            _graphics.PreferredBackBufferWidth = window.Width;
-            _graphics.PreferredBackBufferHeight = window.Height;
+
+            _graphics.PreferredBackBufferWidth = 800; 
+            _graphics.PreferredBackBufferHeight = 500; 
             _graphics.ApplyChanges();
 
-
-            this.Window.Title = "WOOP WOOP";
+            this.Window.Title = "My First Monogame Project";
 
             base.Initialize();
         }
@@ -40,11 +43,12 @@ namespace intro_to_monogame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
 
+            backgroundtexture = Content.Load<Texture2D>("Background(7)");
             dinoTexture = Content.Load<Texture2D>("dino");
-            marioTexture = Content.Load<Texture2D>("mario2");
+            
 
+            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
@@ -59,23 +63,20 @@ namespace intro_to_monogame
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.DodgerBlue);
-
-            // TODO: Add your drawing code here
+            GraphicsDevice.Clear(Color.Red);
 
             _spriteBatch.Begin();
 
+            _spriteBatch.Draw(backgroundtexture, new Vector2(40,40), Color.White);
             _spriteBatch.Draw(dinoTexture, new Vector2(10, 10), Color.White);
 
-            _spriteBatch.Draw(marioTexture, new Vector2(4, 100), Color.White);
 
             _spriteBatch.End();
 
+            // TODO: Add your drawing code here
 
 
-           
-
-
+            
 
             base.Draw(gameTime);
         }

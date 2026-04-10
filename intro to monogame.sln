@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36301.6 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "intro to monogame", "intro to monogame.csproj", "{2F409CA5-8997-49CB-834E-6391558A0B8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro to monogame", "Intro to monogame.csproj", "{F2B53FB0-B2FA-46EE-ABFA-C186A1A9CA7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2F409CA5-8997-49CB-834E-6391558A0B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F409CA5-8997-49CB-834E-6391558A0B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F409CA5-8997-49CB-834E-6391558A0B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F409CA5-8997-49CB-834E-6391558A0B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B53FB0-B2FA-46EE-ABFA-C186A1A9CA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B53FB0-B2FA-46EE-ABFA-C186A1A9CA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B53FB0-B2FA-46EE-ABFA-C186A1A9CA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B53FB0-B2FA-46EE-ABFA-C186A1A9CA7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5F850BA8-4E1A-4C2A-94D0-34821ABD8B26}
+		SolutionGuid = {DF17883A-21EA-4DBA-ACAA-ED7BF9F2B962}
 	EndGlobalSection
 EndGlobal

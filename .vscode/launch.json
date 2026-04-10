@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "C#: intro_to_monogame Debug",
+        "name": "C#: Intro_to_monogame Debug",
         "type": "dotnet",
         "request": "launch",
-        "projectPath": "${workspaceFolder}/intro_to_monogame.csproj"
+        "projectPath": "${workspaceFolder}/Intro_to_monogame.csproj"
       }
     ],
   }
