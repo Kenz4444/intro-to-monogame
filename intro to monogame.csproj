@@ -11,6 +11,18 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Content\Background %287%29.png" />
+    <None Remove="Content\bin\DesktopGL\Content\crying %281%29.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\crying.xnb" />
+    <None Remove="Content\bin\DesktopGL\crying %281%29.xnb" />
+    <None Remove="Content\bin\DesktopGL\crying.xnb" />
+    <None Remove="Content\crying %281%29.png" />
+    <None Remove="Content\crying.png" />
+    <None Remove="Content\god.png" />
+    <None Remove="Content\mario" />
+    <None Remove="Content\obj\DesktopGL\net8.0\Content\crying %281%29.mgcontent" />
+    <None Remove="Content\sun.png" />
+    <None Remove="Content\suns.png" />
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
   </ItemGroup>

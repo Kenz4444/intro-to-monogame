@@ -10,11 +10,14 @@ namespace Intro_to_monogame
         private SpriteBatch _spriteBatch;
 
         Texture2D dinoTexture;
-        Texture2D backgroundtexture;
+        Texture2D cityTexture;
+        Texture2D godsTexture;
+        Texture2D fireTexture;
+        Texture2D girlsadTexture;
 
+        
 
-
-
+        
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -28,13 +31,16 @@ namespace Intro_to_monogame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            ;
 
             _graphics.PreferredBackBufferWidth = 800; 
             _graphics.PreferredBackBufferHeight = 500; 
             _graphics.ApplyChanges();
 
+            
             this.Window.Title = "My First Monogame Project";
+
+            
 
             base.Initialize();
         }
@@ -44,9 +50,11 @@ namespace Intro_to_monogame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
 
-            backgroundtexture = Content.Load<Texture2D>("Background(7)");
+            cityTexture = Content.Load<Texture2D>("city");
             dinoTexture = Content.Load<Texture2D>("dino");
-            
+            godsTexture = Content.Load<Texture2D>("gods");
+            fireTexture = Content.Load<Texture2D>("fire");
+            girlsadTexture = Content.Load<Texture2D>("girlsad");
 
             // TODO: use this.Content to load your game content here
         }
@@ -67,11 +75,15 @@ namespace Intro_to_monogame
 
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(backgroundtexture, new Vector2(40,40), Color.White);
-            _spriteBatch.Draw(dinoTexture, new Vector2(10, 10), Color.White);
+            _spriteBatch.Draw(cityTexture, new Vector2(0,0), Color.White);
+            _spriteBatch.Draw(dinoTexture, new Vector2(10,10), Color.White);
+            _spriteBatch.Draw(godsTexture, new Vector2(5, 200), Color.White);
+            _spriteBatch.Draw(fireTexture, new Vector2(600, 0), Color.White);
+            _spriteBatch.Draw(girlsadTexture, new Vector2(600, 250), Color.White);
 
 
             _spriteBatch.End();
+
 
             // TODO: Add your drawing code here
 
