@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Intro_to_monogame
 {
@@ -14,15 +15,23 @@ namespace Intro_to_monogame
         Texture2D godsTexture;
         Texture2D fireTexture;
         Texture2D girlsadTexture;
-
+        Texture2D purpTexture;
+        Texture2D woopTexture;
+        int randNum;
         
 
-        
+
+
+
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            
+
+
 
 
             
@@ -36,25 +45,46 @@ namespace Intro_to_monogame
             _graphics.PreferredBackBufferWidth = 800; 
             _graphics.PreferredBackBufferHeight = 500; 
             _graphics.ApplyChanges();
+           
+           
 
-            
+
             this.Window.Title = "My First Monogame Project";
 
+            Random generator = new Random();
+            
+            randNum = generator.Next(1, 4);
+            
             
 
-            base.Initialize();
+
+
+
+                base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-
-            cityTexture = Content.Load<Texture2D>("city");
+            if (randNum == 1)
+            {
+                cityTexture = Content.Load<Texture2D>("purp");
+            }
+            else if (randNum == 2)
+            {
+                cityTexture = Content.Load<Texture2D>("woop");
+            }
+            else if (randNum == 3)
+            {
+                cityTexture = Content.Load<Texture2D>("city");
+            }
+            
             dinoTexture = Content.Load<Texture2D>("dino");
             godsTexture = Content.Load<Texture2D>("gods");
             fireTexture = Content.Load<Texture2D>("fire");
             girlsadTexture = Content.Load<Texture2D>("girlsad");
+            
 
             // TODO: use this.Content to load your game content here
         }
@@ -74,12 +104,31 @@ namespace Intro_to_monogame
             GraphicsDevice.Clear(Color.Red);
 
             _spriteBatch.Begin();
+           
+           
+            
+            _spriteBatch.Draw(cityTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(dinoTexture, new Vector2(10, 10), Color.White);
 
-            _spriteBatch.Draw(cityTexture, new Vector2(0,0), Color.White);
-            _spriteBatch.Draw(dinoTexture, new Vector2(10,10), Color.White);
-            _spriteBatch.Draw(godsTexture, new Vector2(5, 200), Color.White);
+            if (randNum == 1)
+            {
+                _spriteBatch.Draw(godsTexture, new Vector2(5, 200), Color.White);
+            }
+            else if (randNum ==2)
+            {
+                _spriteBatch.Draw(godsTexture, new Vector2(100, 200), Color.White);
+            }
+            else if (randNum == 3)
+            {
+                _spriteBatch.Draw(godsTexture, new Vector2(200, 200), Color.White);
+            }
+
+            
+            
             _spriteBatch.Draw(fireTexture, new Vector2(600, 0), Color.White);
             _spriteBatch.Draw(girlsadTexture, new Vector2(600, 250), Color.White);
+
+            
 
 
             _spriteBatch.End();
